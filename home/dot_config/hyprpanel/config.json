@@ -1,0 +1,152 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.font.size": "1.2rem",
+  "wallpaper.image": "/home/steve/Pictures/wallpapers/wallhaven-gw8pw3_3840x1600.png",
+  "wallpaper.enable": true,
+  "theme.bar.transparent": false,
+  "theme.bar.buttons.opacity": 100,
+  "theme.bar.buttons.background_opacity": 0,
+  "theme.bar.opacity": 40,
+  "theme.bar.menus.menu.power.scaling": 90,
+  "bar.battery.label": true,
+  "bar.battery.hideLabelWhenFull": false,
+  "theme.bar.buttons.battery.enableBorder": false,
+  "theme.bar.floating": false,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "systray",
+        "volume",
+        "network",
+        "bluetooth",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "theme.bar.border.location": "none",
+  "menus.media.noMediaText": "No Media Currently Playing",
+  "menus.dashboard.controls.enabled": true,
+  "theme.osd.radius": "2em",
+  "menus.clock.weather.unit": "metric",
+  "menus.clock.weather.location": "3000, Melbourne, Australia",
+  "menus.clock.weather.enabled": false,
+  "menus.dashboard.powermenu.avatar.image": "/usr/share/wallpapers/cachyos-wallpapers/Dracula.png",
+  "menus.dashboard.shortcuts.enabled": true,
+  "menus.dashboard.directories.left.directory1.label": "󰉍  Downloads",
+  "menus.dashboard.directories.right.directory3.label": "󱂵  Home",
+  "menus.dashboard.directories.right.directory2.label": "󰉏  Pictures",
+  "menus.dashboard.directories.right.directory1.label": "󱧶  Documents",
+  "menus.dashboard.directories.left.directory3.label": "󰚝  Projects",
+  "menus.dashboard.directories.left.directory2.label": "󰉏  Videos",
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.showApplicationIcons": true,
+  "bar.workspaces.applicationIconOncePerWorkspace": true,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.showAllActive": true,
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "bar.workspaces.applicationIconEmptyWorkspace": "",
+  "bar.workspaces.scroll_speed": 5,
+  "bar.windowtitle.custom_title": true,
+  "bar.windowtitle.truncation": true,
+  "bar.network.label": false,
+  "bar.network.showWifiInfo": false,
+  "bar.bluetooth.label": false,
+  "bar.volume.label": false,
+  "theme.bar.buttons.systray.enableBorder": false,
+  "bar.clock.showIcon": false,
+  "theme.notification.border_radius": "0.6em",
+  "notifications.position": "top right",
+  "menus.media.hideAuthor": false,
+  "menus.media.hideAlbum": false,
+  "menus.media.displayTime": false,
+  "menus.media.displayTimeTooltip": false,
+  "theme.bar.buttons.enableBorders": false,
+  "wallpaper.pywal": false,
+  "theme.bar.menus.monochrome": true,
+  "theme.bar.menus.card_radius": "0.4em",
+  "theme.bar.buttons.monochrome": true,
+  "theme.matugen": false,
+  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.scheme_type": "tonal-spot",
+  "theme.matugen_settings.contrast": 0,
+  "theme.bar.border.width": "0.15em",
+  "bar.launcher.autoDetectIcon": false,
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "bar.workspaces.workspaces": 1,
+  "bar.volume.scrollDown": "hyprpanel vol +5",
+  "bar.volume.scrollUp": "hyprpanel vol -5",
+  "bar.clock.format": "%a %d %b %I:%M:%S %p",
+  "bar.clock.icon": "󰸗",
+  "bar.media.truncation_size": 100,
+  "bar.media.truncation": false,
+  "bar.media.show_label": true,
+  "bar.media.show_active_only": false,
+  "terminal": "ghostty",
+  "theme.bar.scaling": 85,
+  "theme.bar.buttons.separator.margins": "0.15em",
+  "bar.workspaces.spacing": 1.5,
+  "theme.bar.buttons.media.enableBorder": false,
+  "bar.media.format": "{artist: - }{title}",
+  "theme.osd.enableShadow": false,
+  "menus.clock.weather.interval": 60000,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "google-chrome-stable",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Google Chrome",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Steam",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "steam",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "󰓓",
+  "menus.dashboard.shortcuts.left.shortcut3.icon": "󰊠",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "ghostty",
+  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Ghostty",
+  "menus.dashboard.shortcuts.left.shortcut4.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "webcord",
+  "menus.dashboard.shortcuts.left.shortcut4.tooltip": "Webcord",
+  "bar.customModules.weather.unit": "metric",
+  "menus.power.showLabel": true,
+  "theme.bar.buttons.workspaces.occupied": "#99c1f1"
+}
