@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.pairs",
+    "nvim-mini/mini.pairs",
     opts = function(_, opts)
       -- This code only completes the pair if the cursor is at the end of the
       -- line, chatGPT wrote it but I want to see if this stops the annoying
@@ -36,7 +36,7 @@ return {
   },
 
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     version = false,
     lazy = false,
     opts = {
@@ -75,7 +75,7 @@ return {
   },
 
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     opts = {
       n_lines = 300,
       mappings = {
@@ -102,7 +102,7 @@ return {
   },
 
   {
-    "echasnovski/mini.ai",
+    "nvim-mini/mini.ai",
     opts = {
       custom_textobjects = {
         -- Keys and values for CSS
@@ -124,7 +124,7 @@ return {
   },
 
   {
-    "echasnovski/mini.align",
+    "nvim-mini/mini.align",
     version = false,
     opts = {
       mappings = {

@@ -40,3 +40,11 @@ vim.keymap.set("i", "<M-h>", "<left>")
 vim.keymap.set("i", "<M-j>", "<down>")
 vim.keymap.set("i", "<M-k>", "<up>")
 vim.keymap.set("i", "<M-l>", "<right>")
+
+-- An easier way to exit the terminal
+vim.keymap.set(
+  "t",
+  "<Esc><Esc>",
+  [[<C-\><C-n>]],
+  { desc = "Exit terminal mode" }
+)

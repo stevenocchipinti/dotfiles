@@ -100,8 +100,8 @@ return {
           return require("codecompanion.adapters").extend("copilot", {
             schema = {
               model = {
-                -- default = "gpt-4.1",
-                default = "claude-3.7-sonnet",
+                default = "gpt-4.1",
+                -- default = "claude-3.7-sonnet",
               },
             },
           })
@@ -111,7 +111,7 @@ return {
         chat = {
           keymaps = {
             close = {
-              modes = { n = "<esc>", i = "<C-c>" },
+              modes = { n = "<C-c>", i = "<C-c>" },
             },
           },
         },
@@ -173,7 +173,10 @@ return {
   },
   {
     "ravitemer/mcphub.nvim",
-    build = "npm install -g mcp-hub@latest",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    build = "npm install -g mcp-hub@latest", -- Installs `mcp-hub` node binary globally
     config = function()
       require("mcphub").setup()
     end,
