@@ -21,13 +21,15 @@
         "workspaces"
       ],
       "middle": [
-        "media"
+        "media",
+        "cava"
       ],
       "right": [
         "systray",
         "volume",
         "network",
         "bluetooth",
+        "hyprsunset",
         "clock",
         "notifications"
       ]
@@ -125,7 +127,7 @@
   "bar.media.truncation_size": 100,
   "bar.media.truncation": false,
   "bar.media.show_label": true,
-  "bar.media.show_active_only": false,
+  "bar.media.show_active_only": true,
   "terminal": "ghostty",
   "theme.bar.scaling": 85,
   "theme.bar.buttons.separator.margins": "0.15em",
@@ -148,5 +150,13 @@
   "menus.dashboard.shortcuts.left.shortcut4.tooltip": "Webcord",
   "bar.customModules.weather.unit": "metric",
   "menus.power.showLabel": true,
-  "theme.bar.buttons.workspaces.occupied": "#99c1f1"
+  "theme.bar.buttons.workspaces.occupied": "#99c1f1",
+  "bar.customModules.hyprsunset.label": false,
+  "bar.customModules.hyprsunset.temperature": "4000k",
+  "bar.customModules.cava.showIcon": false,
+  "theme.bar.buttons.modules.cava.enableBorder": false,
+  "bar.customModules.cava.showActiveOnly": true,
+  "bar.customModules.cava.stereo": false,
+  "bar.customModules.hypridle.onLabel": "On",
+  "bar.customModules.hypridle.label": true
 }
