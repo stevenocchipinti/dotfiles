@@ -1,4 +1,4 @@
-theme = tokyonight-storm
+theme = TokyoNight Storm
 font-family = CaskaydiaCove Nerd Font
 window-inherit-font-size = false
 focus-follows-mouse = true
@@ -6,7 +6,7 @@ mouse-hide-while-typing = true
 copy-on-select = clipboard
 app-notifications = no-clipboard-copy
 command = /usr/bin/fish --login --interactive
-background-opacity = 0.6
+background-opacity = 0.9
 window-padding-x = 6
 window-padding-y = 6
 mouse-scroll-multiplier = 0.5
