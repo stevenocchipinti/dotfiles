@@ -6,7 +6,7 @@
   "height": 26,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": [
-    "clock",
+    "mpris",
     "custom/update",
     "custom/screenrecording-indicator",
   ],
@@ -17,6 +17,7 @@
     "pulseaudio",
     "cpu",
     "battery",
+    "clock",
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -32,8 +33,9 @@
     // },
     // This one is greyscale and only allows clicks per workspace
     "window-rewrite": {
-      "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+      "class<chrome-music.youtube.com.*>": "󰎆",
       "class<chromium>": "",
+      "class<chrome.*>": "󰊯", // For the Omarchy "webapps"
       "ghostty": "",
       "alacritty": "",
       "code": "󰨞",
@@ -47,12 +49,19 @@
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space",
   },
   "custom/update": {
-    "format": "",
+    "format": "",
     "exec": "omarchy-update-available",
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
     "tooltip-format": "Omarchy update available",
     "signal": 7,
     "interval": 3600,
+  },
+  "mpris": {
+    "format": "{status_icon} {title}",
+    "status-icons": {
+      "playing": "▶",
+      "paused": "⏸",
+    },
   },
 
   "cpu": {
@@ -60,11 +69,33 @@
     "format": "󰍛",
     "on-click": "$TERMINAL -e btop",
   },
+  // "clock": {
+  //   "format": "{:L%A %H:%M}",
+  //   "format-alt": "{:L%d %B W%V %Y}",
+  //   "tooltip": false,
+  //   "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
+  // },
   "clock": {
-    "format": "{:L%A %H:%M}",
-    "format-alt": "{:L%d %B W%V %Y}",
-    "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
+    "interval": 1,
+    "format": "{:%a %d %b %H:%M:%S %p}",
+    "format-alt": "{:%H:%M:%S %p}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+    },
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],

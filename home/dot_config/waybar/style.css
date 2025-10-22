@@ -24,10 +24,9 @@
   padding: 0 6px;
   margin: 0 1.5px;
   min-width: 9px;
-  opacity: 0.5;
 }
 
-#workspaces button.empty {
+#workspaces button {
   opacity: 0.5;
 }
 
