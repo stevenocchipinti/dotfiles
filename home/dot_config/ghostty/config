@@ -1,4 +1,8 @@
 theme = TokyoNight Storm
+
+# This overrides the default above with the current Omarchy theme, if present
+config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
+
 font-family = CaskaydiaCove Nerd Font
 window-inherit-font-size = false
 focus-follows-mouse = true
@@ -10,3 +14,5 @@ background-opacity = 0.9
 window-padding-x = 6
 window-padding-y = 6
 mouse-scroll-multiplier = 0.5
+
+# vim: ft=toml
