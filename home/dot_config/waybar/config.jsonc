@@ -3,7 +3,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 26,
+  "height": 34,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": [
     "mpris",
@@ -12,6 +12,7 @@
   ],
   "modules-right": [
     "tray",
+    "custom/raindrop",
     "bluetooth",
     "network",
     "pulseaudio",
@@ -41,6 +42,7 @@
       "code": "󰨞",
       "steam": "",
       "discord": "",
+      "omarchy": "",
     },
   },
   "custom/omarchy": {
@@ -55,6 +57,14 @@
     "tooltip-format": "Omarchy update available",
     "signal": 7,
     "interval": 3600,
+  },
+  "custom/raindrop": {
+    "format": "",
+    "exec": "~/code/raincatcher/raincatcher",
+    "on-click": "omarchy-launch-or-focus-webapp raindrop https://app.raindrop.io/my/0/%23inbox-linux",
+    "tooltip-format": "Bookmarks with #inbox-linux on Raindrop.io",
+    "signal": 7,
+    "interval": 600,
   },
   "mpris": {
     "format": "{status_icon} {title}",
@@ -77,8 +87,8 @@
   // },
   "clock": {
     "interval": 1,
-    "format": "{:%a %d %b %H:%M:%S %p}",
-    "format-alt": "{:%H:%M:%S %p}",
+    "format": "{:%a %d %b %I:%M:%S %p}",
+    "format-alt": "{:%I:%M:%S %p}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",

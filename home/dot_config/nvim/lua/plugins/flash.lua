@@ -1,11 +1,7 @@
 return {
   {
     "folke/flash.nvim",
-    opts = {
-      modes = {
-        search = { enabled = true },
-      },
-    },
+    opts = {},
     keys = {
       -- replace the default flash keymap with a localleader mapping
       { "s", mode = { "n", "x", "o" }, false },
