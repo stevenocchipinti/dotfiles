@@ -1,3 +1,5 @@
-if type -q fnm
-    fnm env --use-on-cd --shell fish | source
+set FNM_PATH "/home/steve/.local/share/fnm"
+if [ -d "$FNM_PATH" ]
+    set PATH "$FNM_PATH" $PATH
+    fnm env --use-on-cd | source
 end
