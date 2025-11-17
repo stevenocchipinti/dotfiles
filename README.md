@@ -37,24 +37,39 @@ how to use it, as it includes many pre-configured plugins, options and keybinds.
 
 ## Chezmoi cheatsheet
 
-### Common commands
+### `.dotfiles` -> `$HOME`
 
-| Goal                                              | Command                       | Notes                                                           |
-| ------------------------------------------------- | ----------------------------- | --------------------------------------------------------------- |
-| **See what’s changed**                            | `chezmoi status`              | Lists modified, added, or removed files.                        |
-| **Preview changes**                               | `chezmoi diff`                | Shows diff between system and chezmoi source.                   |
-| **Apply all updates to system**                   | `chezmoi apply`               | Updates real files from chezmoi’s source. Add `-v` for details. |
-| **Edit a managed file**                           | `chezmoi edit ~/.zshrc`       | Opens file and auto-syncs edits back to chezmoi source.         |
-| **Add a new file**                                | `chezmoi add ~/.bash_aliases` | Brings an existing file into chezmoi management.                |
-| **Fetch changes from source (e.g., remote repo)** | `chezmoi update`              | Runs `git pull` + re-applies updates.                           |
-| **Re-apply everything (safe)**                    | `chezmoi apply -v`            | Good after `git pull` or edits to templates.                    |
+| Command                       | Notes                                       |
+| ----------------------------- | ------------------------------------------- |
+| `chezmoi apply -v`            | Applies all changes to `$HOME`              |
+| `chezmoi apply <file>`        | Applies changes to a single file in `$HOME` |
+| `chezmoi apply --interactive` | Interactively applies changes to `$HOME`    |
+| `chezmoi status`              | Shows which files would be applied          |
+| `chezmoi diff`                | Shows diff that would be applied to `$HOME` |
+| `chezmoi update`              | Runs `git pull` + re-applies updates.       |
+
+### `$HOME` -> `.dotfiles`
+
+| Command                        | Notes                                    |
+| ------------------------------ | ---------------------------------------- |
+| `chezmoi add <file>`           | Adds a file to `.dotfiles`               |
+| `chezmoi add --interactive`    | Adds a file to `.dotfiles` interactively |
+| `chezmoi re-add`               | Adds all files to `.dotfiles`            |
+| `chezmoi re-add <file>`        | Adds a specific file to `.dotfiles`      |
+| `chezmoi re-add --interactive` | Interactively adds files to `.dotfiles`  |
+
+### `.dotfiles` -> GitHub
+
+| Command      | Notes            |
+| ------------ | ---------------- |
+| `git add`    | Normal git stuff |
+| `git commit` | Normal git stuff |
+| `git push`   | Normal git stuff |
 
 ### Other useful commands
 
-| Task                              | Command                                           | Notes                                       |
-| --------------------------------- | ------------------------------------------------- | ------------------------------------------- |
-| See managed files                 | `chezmoi managed`                                 | Lists all files under chezmoi’s control.    |
-| Diff a single file                | `chezmoi diff ~/.zshrc`                           | Check one file only.                        |
-| Remove a file from chezmoi        | `chezmoi forget ~/.zshrc`                         | Stops managing the file (keeps local copy). |
-| Backup local changes before apply | `chezmoi apply --backup`                          | Keeps old versions under `.chezmoi.backup`. |
-| Apply only to one file            | `chezmoi apply ~/.config/alacritty/alacritty.yml` | Useful for partial updates.                 |
+| Command                   | Notes                                       |
+| ------------------------- | ------------------------------------------- |
+| `chezmoi managed`         | Lists all files under chezmoi’s control.    |
+| `chezmoi forget ~/.zshrc` | Stops managing the file (keeps local copy). |
+| `chezmoi apply --backup`  | Keeps old versions under `.chezmoi.backup`. |
