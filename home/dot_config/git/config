@@ -64,6 +64,9 @@
 [branch]
   autosetupmerge = true
 
+[merge]
+  tool = nvimdiff
+
 [diff]
   renames = copy
 
@@ -125,3 +128,5 @@
 [pull]
   ff = only
 
+[fetch]
+	prune = true

@@ -1,5 +1,5 @@
 function extract_version_from -d "Extract a semver from a string"
-    echo $argv | \grep -o "[0-9]\+\.[0-9]\+\.[0-9]\+"
+    echo $argv | \grep -o "\d\+\.\d\+\.\d\+"
 end
 
 function fish_prompt --description 'Write out the prompt'

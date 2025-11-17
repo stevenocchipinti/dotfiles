@@ -1,5 +1,6 @@
 return {
   {
+    "nvim-treesitter-textobjects",
     "nvim-treesitter/nvim-treesitter",
     opts = {
       textobjects = {

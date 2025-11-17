@@ -10,9 +10,19 @@ mouse-hide-while-typing = true
 copy-on-select = clipboard
 app-notifications = no-clipboard-copy
 command = /usr/bin/fish --login --interactive
-background-opacity = 0.9
 window-padding-x = 6
 window-padding-y = 6
 mouse-scroll-multiplier = 0.5
+
+# This should be enabled for linux but disabled for mac
+# background-opacity = 0.9
+
+macos-option-as-alt = true
+keybind = shift+enter=text:\x1b\r
+macos-titlebar-style = tabs
+
+# Fancy effects
+# custom-shader = shaders/cursor_blaze.glsl
+# custom-shader = shaders/glitchy.glsl
 
 # vim: ft=toml
