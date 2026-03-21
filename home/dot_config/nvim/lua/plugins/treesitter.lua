@@ -1,43 +1,43 @@
 return {
-  {
-    "nvim-treesitter-textobjects",
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      textobjects = {
-        select = {
-          enable = true,
-          keymaps = {
-            -- There are some custom text objects configured with mini.ai
-            ["ac"] = "@comment.outer", -- These normally default to @class
-            ["ic"] = "@comment.outer", -- @comment.inner not supported in TS/JS
-            ["ak"] = "@assignment.lhs",
-            ["ik"] = "@assignment.lhs",
-            ["av"] = "@assignment.rhs",
-            ["iv"] = "@assignment.rhs",
-            ["ar"] = "@attribute.outer",
-            ["ir"] = "@attribute.inner",
-          },
-        },
-        move = {
-          enable = true,
-          goto_next_start = {
-            ["]f"] = "@function.outer",
-            ["]c"] = "@comment.outer",
-            ["]a"] = "@parameter.inner",
-            ["]r"] = "@attribute.outer",
-            ["]R"] = "@attribute.inner",
-          },
-          goto_previous_start = {
-            ["[f"] = "@function.outer",
-            ["[c"] = "@comment.outer",
-            ["[a"] = "@parameter.inner",
-            ["[r"] = "@attribute.outer",
-            ["[R"] = "@attribute.inner",
-          },
-        },
-      },
-    },
-  },
+  -- {
+  --   "nvim-treesitter-textobjects",
+  --   "nvim-treesitter/nvim-treesitter",
+  --   opts = {
+  --     textobjects = {
+  --       select = {
+  --         enable = true,
+  --         keymaps = {
+  --           -- There are some custom text objects configured with mini.ai
+  --           -- ["ac"] = "@comment.outer", -- These normally default to @class
+  --           -- ["ic"] = "@comment.outer", -- @comment.inner not supported in TS/JS
+  --           -- ["ak"] = "@assignment.lhs",
+  --           -- ["ik"] = "@assignment.lhs",
+  --           -- ["av"] = "@assignment.rhs",
+  --           -- ["iv"] = "@assignment.rhs",
+  --           -- ["ar"] = "@attribute.outer",
+  --           -- ["ir"] = "@attribute.inner",
+  --         },
+  --       },
+  --       move = {
+  --         enable = true,
+  --         goto_next_start = {
+  --           ["]f"] = "@function.outer",
+  --           ["]c"] = "@comment.outer",
+  --           ["]a"] = "@parameter.inner",
+  --           ["]r"] = "@attribute.outer",
+  --           ["]R"] = "@attribute.inner",
+  --         },
+  --         goto_previous_start = {
+  --           ["[f"] = "@function.outer",
+  --           ["[c"] = "@comment.outer",
+  --           ["[a"] = "@parameter.inner",
+  --           ["[r"] = "@attribute.outer",
+  --           ["[R"] = "@attribute.inner",
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
   {
     "aaronik/treewalker.nvim",
     opts = {
@@ -56,16 +56,13 @@ return {
     },
   },
   {
-    "folke/which-key.nvim",
+    "windwp/nvim-ts-autotag",
+    event = "LazyFile",
     opts = {
-      spec = {
-        { "ac", mode = { "o", "x" }, desc = "comment" }, -- Not overriding class for some reason
-        { "ic", mode = { "o", "x" }, desc = "comment" }, -- Not overriding class for some reason
-        { "ak", mode = { "o", "x" }, desc = "assignment LHS (key)" },
-        { "ik", mode = { "o", "x" }, desc = "assignment LHS (key)" },
-        { "av", mode = { "o", "x" }, desc = "assignment RHS (value)" },
-        { "iv", mode = { "o", "x" }, desc = "assignment RHS (value)" },
-        { "ir", mode = { "o", "x" }, desc = "attribute (react, html, etc.)" },
+      opts = { -- Defaults
+        enable_close = false, -- Auto close tags
+        enable_rename = true, -- Auto rename pairs of tags
+        enable_close_on_slash = true, -- Auto close on trailing </} },
       },
     },
   },
