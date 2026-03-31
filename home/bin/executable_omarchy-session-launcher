@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Session launcher for Omarchy
+# Presents a menu to select what you want to do
+
+# Display menu
+echo ""
+echo "What do you want to do?"
+echo ""
+echo "1) 👾 Game - Discord and Steam"
+echo "2) 👨‍💻 Code - Chromium and Terminal"
+echo "3) 🌐 Web  - Just Chromium"
+echo ""
+echo "q) Quit"
+echo ""
+echo -n "Your choice: "
+
+# Read user input
+read -r -n 1 choice
+echo
+
+case "$choice" in
+1)
+  echo "Launching Game mode..."
+  # nohup uwsm-app -- omarchy-launch-webapp https://discord.com/channels/@me > /dev/null 2>&1 &
+  nohup uwsm-app -- discord >/dev/null 2>&1 &
+  nohup uwsm-app -- steam >/dev/null 2>&1 &
+  ;;
+2)
+  echo "Launching Code mode..."
+  nohup uwsm-app -- chromium >/dev/null 2>&1 &
+  nohup uwsm-app -- xdg-terminal-exec >/dev/null 2>&1 &
+  ;;
+3)
+  echo "Launching Web mode..."
+  nohup uwsm-app -- chromium >/dev/null 2>&1 &
+  ;;
+q)
+  echo "See ya! 👋"
+  ;;
+*)
+  echo "Invalid choice"
+  ;;
+esac
+
+# Give apps time to launch before terminal closes
+sleep 0.5
